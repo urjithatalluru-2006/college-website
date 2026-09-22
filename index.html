@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Malineni Women's College | Empowering Women Through Education</title>
+
+  <meta
+    name="description"
+    content="Malineni Women's College - Empowering women through quality education, innovation, leadership and excellence."
+  />
+
+  <style>
+    /* =========================
+       RESET & GLOBAL STYLES
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #7c1d5c;
+      --primary-dark: #53113d;
+      --secondary: #d99a2b;
+      --light: #fff8fc;
+      --white: #ffffff;
+      --dark: #20202a;
+      --text: #5c5c69;
+      --border: #eadde5;
+      --shadow: 0 10px 35px rgba(66, 20, 48, 0.10);
+      --radius: 16px;
+      --transition: 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: var(--secondary);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      color: var(--primary-dark);
+      font-size: clamp(30px, 4vw, 44px);
+      margin: 8px 0 12px;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--secondary);
+      color: #2d210d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(217, 154, 43, 0.3);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.8);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .topbar {
+      background: var(--primary-dark);
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .top-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .top-links a:hover {
+      color: var(--secondary);
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 15px rgba(0,0,0,.06);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #b63c86);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 17px;
+      border: 3px solid #f0d6e5;
+    }
+
+    .brand-text h1 {
+      color: var(--primary-dark);
+      font-size: 19px;
+      line-height: 1.1;
+    }
+
+    .brand-text small {
+      color: var(--text);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      color: #39323a;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(48, 8, 34, .90), rgba(92, 18, 68, .70)),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(217,154,43,.12);
+      right: -200px;
+      top: -100px;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 760px;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 30px;
+      color: #ffe8ac;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .hero h2 {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 span {
+      color: #ffd36a;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      color: #f5eaf1;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       NOTICE BAR
+    ========================== */
+
+    .notice {
+      background: var(--secondary);
+      color: #30240d;
+    }
+
+    .notice-inner {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    .notice strong {
+      white-space: nowrap;
+    }
+
+    .notice-text {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .experience-card {
+      position: absolute;
+      bottom: 25px;
+      right: -25px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .experience-card strong {
+      display: block;
+      color: var(--primary);
+      font-size: 32px;
+    }
+
+    .about-content .eyebrow {
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .about-content h2 {
+      color: var(--primary-dark);
+      font-size: 40px;
+      margin: 8px 0 20px;
+    }
+
+    .about-content p {
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .check-list li {
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--secondary);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* =========================
+       STATS
+    ========================== */
+
+    .stats {
+      background: var(--primary);
+      color: white;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat {
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 900;
+      color: #ffd36a;
+    }
+
+    .stat p {
+      opacity: .85;
+      font-size: 14px;
+    }
+
+    /* =========================
+       COURSES
+    ========================== */
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .course-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+      transition: var(--transition);
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .course-image {
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .course-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s ease;
+    }
+
+    .course-card:hover .course-image img {
+      transform: scale(1.08);
+    }
+
+    .course-body {
+      padding: 24px;
+    }
+
+    .course-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: #f8e9f2;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    .course-body h3 {
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .course-body p {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .course-link {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       FACILITIES
+    ========================== */
+
+    .facilities {
+      background: var(--light);
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .facility {
+      background: white;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .facility:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .facility-icon {
+      width: 65px;
+      height: 65px;
+      margin: auto auto 15px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #f8e9f2;
+      font-size: 28px;
+    }
+
+    .facility h3 {
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .facility p {
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    /* =========================
+       WHY US
+    ========================== */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .why-image img {
+      height: 450px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .why-items {
+      display: grid;
+      gap: 18px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 18px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+
+    .why-item-icon {
+      min-width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+    }
+
+    .why-item h3 {
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .why-item p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* =========================
+       TESTIMONIALS
+    ========================== */
+
+    .testimonials {
+      background: var(--light);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .stars {
+      color: var(--secondary);
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial p {
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .student {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .student-avatar {
+      width: 45px;
+      height: 45px;
+      background: #f1dbe8;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .student strong {
+      display: block;
+      color: var(--primary-dark);
+    }
+
+    .student small {
+      color: var(--text);
+    }
+
+    /* =========================
+       ADMISSION CTA
+    ========================== */
+
+    .admission {
+      padding: 0 0 90px;
+    }
+
+    .admission-box {
+      background:
+        linear-gradient(110deg, rgba(83,17,61,.97), rgba(124,29,92,.92)),
+        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1500&q=80")
+        center/cover;
+      color: white;
+      padding: 60px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .admission-box h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .admission-box p {
+      opacity: .85;
+      max-width: 600px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 35px;
+    }
+
+    .contact-info {
+      background: var(--primary);
+      color: white;
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .contact-info h3 {
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .contact-detail span:first-child {
+      font-size: 22px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-detail p {
+      opacity: .8;
+      font-size: 14px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      transition: var(--transition);
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(124,29,92,.08);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #24151f;
+      color: white;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 35px;
+      margin-bottom: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+      color: #ffd36a;
+    }
+
+    footer p,
+    footer a {
+      color: #cbbfc6;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 9px 0;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .socials a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.1);
+      color: white;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    .socials a:hover {
+      background: var(--secondary);
+      color: #24151f;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      text-align: center;
+      color: #9d9299;
+      font-size: 13px;
+    }
+
+    /* =========================
+       BACK TO TOP
+    ========================== */
+
+    #backTop {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      box-shadow: var(--shadow);
+      font-size: 18px;
+    }
+
+    #backTop.show {
+      display: block;
+    }
+
+    /* =========================
+       TOAST
+    ========================== */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 30px;
+      transform: translate(-50%, 100px);
+      background: #222;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      z-index: 2000;
+      opacity: 0;
+      transition: .35s ease;
+      pointer-events: none;
+      font-size: 14px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+        box-shadow: 0 15px 25px rgba(0,0,0,.08);
+        transform: translateY(-150%);
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s ease;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .about-grid,
+      .why-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        max-width: 650px;
+        margin: auto;
+      }
+
+      .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .admission-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .topbar {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h2 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .about-content h2 {
+        font-size: 32px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .courses-grid,
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .admission-box {
+        padding: 35px 25px;
+      }
+
+      .admission-box h2 {
+        font-size: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        📞 +91 00000 00000 &nbsp; | &nbsp;
+        ✉️ info@malineniwomenscollege.edu.in
+      </div>
+
+      <div class="top-links">
+        <a href="#admissions">Admissions</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand">
+        <div class="logo">MWC</div>
+
+        <div class="brand-text">
+          <h1>Malineni Women's College</h1>
+          <small>EDUCATION • EXCELLENCE • EMPOWERMENT</small>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-badge">
+            ✦ Shaping Confident Women & Future Leaders
+          </div>
+
+          <h2>
+            Learn. Lead.<br />
+            <span>Make a Difference.</span>
+          </h2>
+
+          <p>
+            Welcome to Malineni Women's College — a place where knowledge,
+            character, creativity and leadership come together to empower
+            young women for a brighter future.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#admissions" class="btn btn-primary">
+              Apply for Admission →
+            </a>
+
+            <a href="#courses" class="btn btn-outline">
+              Explore Courses
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================
+         NOTICE
+    ========================== -->
+
+    <div class="notice">
+      <div class="container notice-inner">
+        <strong>📢 NOTICE</strong>
+
+        <div class="notice-text">
+          Admissions are open for the upcoming academic year.
+          Contact the college office for application details and eligibility.
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=85"
+            alt="College campus"
+          />
+
+          <div class="experience-card">
+            <strong>MWC</strong>
+            <span>Empowering Women</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+
+          <span class="eyebrow">About Our College</span>
+
+          <h2>Education that empowers. Values that inspire.</h2>
+
+          <p>
+            Malineni Women's College is committed to creating an inspiring
+            educational environment where students can discover their
+            potential, develop professional skills and become responsible
+            contributors to society.
+          </p>
+
+          <p>
+            Our academic environment combines classroom learning with
+            practical exposure, extracurricular activities, technology and
+            opportunities for personal development.
+          </p>
+
+          <ul class="check-list">
+            <li>Student-focused learning environment</li>
+            <li>Experienced and supportive faculty</li>
+            <li>Modern learning resources</li>
+            <li>Focus on career and leadership development</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            Know More
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         STATS
+    ========================== -->
+
+    <section class="stats">
+
+      <div class="container stats-grid">
+
+        <div class="stat">
+          <div class="stat-number" data-target="25">0</div>
+          <p>Years of Educational Excellence</p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number" data-target="5000">0</div>
+          <p>Students Guided</p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number" data-target="50">0</div>
+          <p>Qualified Faculty</p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number" data-target="20">0</div>
+          <p>Academic & Skill Programs</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         COURSES
+    ========================== -->
+
+    <section class="section" id="courses">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>Academic Programs</span>
+          <h2>Explore Our Courses</h2>
+          <p>
+            Build a strong academic foundation and develop skills for
+            higher education and professional success.
+          </p>
+        </div>
+
+        <div class="courses-grid">
+
+          <article class="course-card">
+
+            <div class="course-image">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                alt="Business studies"
+              />
+            </div>
+
+            <div class="course-body">
+              <div class="course-icon">📊</div>
+              <h3>Commerce & Management</h3>
+              <p>
+                Develop knowledge in accounting, business, finance,
+                management and entrepreneurship.
+              </p>
+              <a href="#contact" class="course-link">Learn More →</a>
+            </div>
+
+          </article>
+
+          <article class="course-card">
+
+            <div class="course-image">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                alt="Computer science"
+              />
+            </div>
+
+            <div class="course-body">
+              <div class="course-icon">💻</div>
+              <h3>Computer Applications</h3>
+              <p>
+                Learn programming, applications, digital technologies
+                and modern computing concepts.
+              </p>
+              <a href="#contact" class="course-link">Learn More →</a>
+            </div>
+
+          </article>
+
+          <article class="course-card">
+
+            <div class="course-image">
+              <img
+                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80"
+                alt="Science laboratory"
+              />
+            </div>
+
+            <div class="course-body">
+              <div class="course-icon">🔬</div>
+              <h3>Science Programs</h3>
+              <p>
+                Build scientific knowledge through theoretical learning,
+                laboratory work and practical exploration.
+              </p>
+              <a href="#contact" class="course-link">Learn More →</a>
+            </div>
+
+          </article>
+
+          <article class="course-card">
+
+            <div class="course-image">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80"
+                alt="Arts education"
+              />
+            </div>
+
+            <div class="course-body">
+              <div class="course-icon">📚</div>
+              <h3>Arts & Humanities</h3>
+              <p>
+                Explore languages, literature, social sciences and
+                creative approaches to learning.
+              </p>
+              <a href="#contact" class="course-link">Learn More →</a>
+            </div>
+
+          </article>
+
+          <article class="course-card">
+
+            <div class="course-image">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+                alt="Entrepreneurship"
+              />
+            </div>
+
+            <div class="course-body">
+              <div class="course-icon">🚀</div>
+              <h3>Entrepreneurship</h3>
+              <p>
+                Encourage innovation, business thinking and practical
+                skills for aspiring entrepreneurs.
+              </p>
+              <a href="#contact" class="course-link">Learn More →</a>
+            </div>
+
+          </article>
+
+          <article class="course-card">
+
+            <div class="course-image">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80"
+                alt="Skill development"
+              />
+            </div>
+
+            <div class="course-body">
+              <div class="course-icon">🎯</div>
+              <h3>Skill Development</h3>
+              <p>
+                Strengthen communication, teamwork, leadership and
+                career-readiness skills.
+              </p>
+              <a href="#contact" class="course-link">Learn More →</a>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         FACILITIES
+    ========================== -->
+
+    <section class="section facilities" id="facilities">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>Campus Life</span>
+          <h2>Facilities & Student Life</h2>
+          <p>
+            A supportive campus environment designed to encourage
+            academic growth, creativity and wellbeing.
+          </p>
+        </div>
+
+        <div class="facility-grid">
+
+          <div class="facility">
+            <div class="facility-icon">📖</div>
+            <h3>Library</h3>
+            <p>
+              Learning resources, reference materials and a quiet
+              environment for study.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">💻</div>
+            <h3>Computer Labs</h3>
+            <p>
+              Technology-enabled learning spaces for practical
+              computer education.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">🧪</div>
+            <h3>Laboratories</h3>
+            <p>
+              Practical learning facilities supporting science and
+              technical education.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">🏃‍♀️</div>
+            <h3>Sports</h3>
+            <p>
+              Opportunities for students to participate in sports,
+              fitness and recreational activities.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">🎭</div>
+            <h3>Cultural Activities</h3>
+            <p>
+              Platforms for creativity, performance, communication
+              and cultural expression.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">🚌</div>
+            <h3>Transportation</h3>
+            <p>
+              Convenient transportation options to support student
+              access to campus.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">👩‍🏫</div>
+            <h3>Mentoring</h3>
+            <p>
+              Academic and personal guidance to help students achieve
+              their goals.
+            </p>
+          </div>
+
+          <div class="facility">
+            <div class="facility-icon">💼</div>
+            <h3>Career Support</h3>
+            <p>
+              Skill-building and career guidance for future
+              professional opportunities.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container why-grid">
+
+        <div class="why-image">
+          <img
+            src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1100&q=85"
+            alt="Students collaborating"
+          />
+        </div>
+
+        <div>
+
+          <div class="section-title" style="text-align:left;margin-bottom:30px;">
+            <span>Why Malineni Women's College?</span>
+            <h2>Growing together, achieving together.</h2>
+            <p style="margin:0;">
+              We aim to provide an environment where every student can
+              learn confidently and discover her strengths.
+            </p>
+          </div>
+
+          <div class="why-items">
+
+            <div class="why-item">
+              <div class="why-item-icon">🎓</div>
+              <div>
+                <h3>Academic Excellence</h3>
+                <p>
+                  A learning environment focused on strong fundamentals,
+                  curiosity and continuous improvement.
+                </p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-icon">🌱</div>
+              <div>
+                <h3>Personal Growth</h3>
+                <p>
+                  Activities that encourage confidence, communication,
+                  teamwork and leadership.
+                </p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-icon">💡</div>
+              <div>
+                <h3>Innovation & Skills</h3>
+                <p>
+                  Students are encouraged to develop practical and
+                  technology-oriented skills.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         TESTIMONIALS
+    ========================== -->
+
+    <section class="section testimonials">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>Student Voices</span>
+          <h2>What Our Students Say</h2>
+          <p>
+            Experiences that reflect the learning and growth of our
+            student community.
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              "The college has helped me become more confident,
+              improve my communication skills and focus on my career."
+            </p>
+
+            <div class="student">
+              <div class="student-avatar">A</div>
+              <div>
+                <strong>Ananya</strong>
+                <small>Student</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              "The teachers are supportive and encourage students
+              to participate in academics as well as activities."
+            </p>
+
+            <div class="student">
+              <div class="student-avatar">S</div>
+              <div>
+                <strong>Sneha</strong>
+                <small>Student</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              "I got opportunities to develop skills beyond the
+              classroom and explore my interests."
+            </p>
+
+            <div class="student">
+              <div class="student-avatar">P</div>
+              <div>
+                <strong>Priya</strong>
+                <small>Student</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         ADMISSIONS
+    ========================== -->
+
+    <section class="admission" id="admissions">
+
+      <div class="container">
+
+        <div class="admission-box">
+
+          <div>
+            <h2>Start Your Journey With Us</h2>
+
+            <p>
+              Take the next step toward your academic and professional
+              goals. Contact our admissions team to learn about courses,
+              eligibility and application procedures.
+            </p>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">
+            Enquire Now →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section contact" id="contact">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>Get In Touch</span>
+          <h2>Contact Malineni Women's College</h2>
+          <p>
+            Have questions about admissions, courses or campus life?
+            Send us a message.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <h3>College Information</h3>
+
+            <div class="contact-detail">
+              <span>📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>
+                  Malineni Women's College<br />
+                  Andhra Pradesh, India
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span>📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+91 00000 00000</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span>✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>info@malineniwomenscollege.edu.in</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span>🕘</span>
+              <div>
+                <strong>Office Hours</strong>
+                <p>Monday – Saturday: 9:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+
+          </div>
+
+          <form class="contact-form" id="contactForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Your phone"
+                  required
+                />
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="course">Interested Program</label>
+
+              <select id="course">
+                <option value="">Select a program</option>
+                <option>Commerce & Management</option>
+                <option>Computer Applications</option>
+                <option>Science Programs</option>
+                <option>Arts & Humanities</option>
+                <option>Entrepreneurship</option>
+                <option>Skill Development</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+
+              <textarea
+                id="message"
+                placeholder="Write your message..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Send Enquiry →
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>Malineni Women's College</h3>
+
+          <p>
+            Empowering young women with knowledge, confidence, skills
+            and values to contribute positively to society.
+          </p>
+
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Admissions</h3>
+
+          <ul class="footer-links">
+            <li><a href="#admissions">Admission Process</a></li>
+            <li><a href="#contact">Eligibility</a></li>
+            <li><a href="#contact">Enquiry</a></li>
+            <li><a href="#contact">Contact Office</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+
+          <p>📍 Andhra Pradesh, India</p>
+          <p>📞 +91 00000 00000</p>
+          <p>✉️ info@malineniwomenscollege.edu.in</p>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Malineni Women's College.
+        All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backTop" aria-label="Back to top">↑</button>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    Thank you! Your enquiry has been submitted.
+  </div>
+
+
+  <script>
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      menuBtn.textContent =
+        navLinks.classList.contains("active") ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+
+    /* =========================
+       COUNTER ANIMATION
+    ========================== */
+
+    const counters = document.querySelectorAll(".stat-number");
+    let counterStarted = false;
+
+    function startCounters() {
+
+      if (counterStarted) return;
+
+      const statsSection = document.querySelector(".stats");
+      const position = statsSection.getBoundingClientRect().top;
+
+      if (position < window.innerHeight - 100) {
+
+        counterStarted = true;
+
+        counters.forEach(counter => {
+
+          const target = Number(counter.dataset.target);
+          let current = 0;
+
+          const increment = Math.max(1, Math.ceil(target / 80));
+
+          const updateCounter = () => {
+
+            current += increment;
+
+            if (current >= target) {
+              counter.textContent = target.toLocaleString() + "+";
+              return;
+            }
+
+            counter.textContent = current.toLocaleString();
+            requestAnimationFrame(updateCounter);
+          };
+
+          updateCounter();
+
+        });
+      }
+    }
+
+    window.addEventListener("scroll", startCounters);
+    startCounters();
+
+
+    /* =========================
+       BACK TO TOP
+    ========================== */
+
+    const backTop = document.getElementById("backTop");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+        backTop.classList.add("show");
+      } else {
+        backTop.classList.remove("show");
+      }
+
+    });
+
+    backTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+
+    /* =========================
+       CONTACT FORM
+    ========================== */
+
+    const contactForm = document.getElementById("contactForm");
+    const toast = document.getElementById("toast");
+
+    contactForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      toast.classList.add("show");
+
+      contactForm.reset();
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
+
+    });
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================== */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* =========================
+       ACTIVE NAVIGATION
+    ========================== */
+
+    const sections = document.querySelectorAll("section[id]");
+    const links = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+
+      let current = "";
+
+      sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+
+      });
+
+      links.forEach(link => {
+
+        link.style.color = "";
+
+        if (link.getAttribute("href") === "#" + current) {
+          link.style.color = "var(--primary)";
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
